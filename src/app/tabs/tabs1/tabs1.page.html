@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tabs1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">tabs1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+   
+  <div id="container" class="cuerpo_page sin_padding"> 
+
+    <ion-list class="custom-list-background">
+
+      <ion-item *ngFor="let product of products" class="custom-item-background">
+        <ion-thumbnail slot="start">
+          <img [src]="product.imageUrl" alt="{{ product.name }}">
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{ product.name }}</h2>
+          <p>${{ product.price }}</p>
+        </ion-label>
+      </ion-item>
+      
+    </ion-list> 
+  </div>
+
+
+
+
+ 
+
+</ion-content>

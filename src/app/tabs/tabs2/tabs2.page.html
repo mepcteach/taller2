@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tabs2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">tabs2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+ 
+  <div id="container" class="cuerpo_page cuerpo_page_extra">  
+
+    <ion-card *ngFor="let exp of experiencias">
+      <ion-img [src]="exp.imageUrl"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{ exp.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ exp.description }}</p>
+      </ion-card-content>
+    </ion-card>
+    
+ </div>
+
+</ion-content>
